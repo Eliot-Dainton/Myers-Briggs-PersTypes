@@ -79,14 +79,6 @@ class NaiveBayesText:
 		unique, counts = np.unique(self.preds, return_counts=True)
 		print("With dist:", np.asarray((unique, counts)).T)
 
-		# print('reversed', self.reversed_pers_types)
-		# print('perstypes', self.pers_types)
-		# print('preds', self.preds[1:10])
-
-		# self.decoded_preds = [self.reversed_pers_types[yi] for yi in self.preds]
-		# print('decoded_preds')
-		# print(self.decoded_preds[1:10])
-
 		self.scores = self.get_scores(y_test)
 		print("\n\n")
 		return self.scores
